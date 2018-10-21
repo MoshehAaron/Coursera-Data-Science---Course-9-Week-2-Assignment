@@ -1,0 +1,27 @@
+---
+???title: "Coursera Data Science Course 9 Week 2"
+author: "Philippe Ségard"
+date: "21 oktober 2018"
+output: html_document
+---
+
+#21 oktober 2018
+
+```{r, echo=FALSE, results="asis"}
+
+##Assignment
+
+library(leaflet)
+
+mymap<-leaflet() %>% addTiles()
+
+mymap<-mymap %>% addMarkers(lat=50.894912 , lng=4.341511, popup="Atomium")
+
+mymap<-mymap %>% addRectangles(lat1=50.894912-0.001 , lng1=4.341511-0.001, lat2=50.894912+0.001 , lng2=4.341511+0.001)
+
+mymap
+
+```
+
+
+The map shows the Atomium near Brussels, a well known tourist landmark.
